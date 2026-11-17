@@ -8,10 +8,10 @@ print('-' * 80)
 
 name = input('Как я могу к вам обращаться? ')
 age = int(input('Сколько вам лет? '))
+weight = float(input('Какой ваш вес? '))
 height = float(
     input('Ваш рост? (укажите согласно примеру: 1.82 м) ')
 )
-weight = float(input('Какой ваш вес? '))
 
 bmi = weight / (height ** 2)
 bmi = round(bmi, 1)
