@@ -1,30 +1,28 @@
-import time 
- # Импортировал модуль, чтобы использовать его в конце
-
+import time
 
 WATER_PER_KG = 30
-WATER_VOLUME = 1000 # Обозначил заранее константы
-print('ДОБРО ПОЖАЛОВАТЬ В FitLife!')
-print('-'*80) # Начальный экран программы
+WATER_VOLUME = 1000
 
- # Спрашиваем нужные вводные
+print('ДОБРО ПОЖАЛОВАТЬ В FitLife!')
+print('-' * 80)
+
 name = input('Как я могу к вам обращаться? ')
 age = int(input('Сколько вам лет? '))
 height = float(
-input('Ваш рост? (укажите согласно примеру: 1.82 м) ')
-) 
+    input('Ваш рост? (укажите согласно примеру: 1.82 м) ')
+)
 weight = float(input('Какой ваш вес? '))
 
- # Дальше идет расчет индекса массы тела
 bmi = weight / (height ** 2)
 bmi = round(bmi, 1)
 
-#Рассчет количества воды, необходимой в сутки
 water_ml = weight * WATER_PER_KG
 water_l = water_ml / WATER_VOLUME
 water_l = round(water_l, 2)
-print('FitLife считает... Подождите...', flush=True) 
-time.sleep(3) #Вывод сообщения с просьбой подождать
+
+print('FitLife считает... Подождите...', flush=True)
+time.sleep(3)
+
 
 def app_is_calculating():
     """Выводит рассчитанные данные пользователя."""
@@ -35,5 +33,4 @@ def app_is_calculating():
     return
 
 
-app_is_calculating() 
- # И выводим весь полученный результат одной функцией
+app_is_calculating()
