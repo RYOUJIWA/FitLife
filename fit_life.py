@@ -21,7 +21,7 @@ water_l = water_ml / WATER_VOLUME
 water_l = round(water_l, 2)
 
 print('FitLife считает... Подождите...', flush=True)
-time.sleep(2)
+time.sleep(1.5)
 
 
 def app_is_calculating():
